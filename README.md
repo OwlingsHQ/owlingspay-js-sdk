@@ -46,7 +46,7 @@ https://api.pay.owlings.com/verify
 Your setup will be validated before we initiate payment, if something is amiss, an error will be thrown. This should help during your integration.
 
 
-Sample Pay
+## Live Demo
 
 To see a live demo of Owlings Pay, visit:
 ```
