@@ -9,7 +9,7 @@ This is a guide on how to implement Owlings Pay on your website using Owlings in
 ### Step 1: Import the Owlings Pay inline SDK into your page
 
 ```html
-<script async type="text/javascript" src="cdn/owlings.js"></script>
+<script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/OwlingsHQ/owlingspay-js-sdk@main/owlingspay.js"></script>
 ```
 
 ### Step 2: Setup and Initiate payment on your website
