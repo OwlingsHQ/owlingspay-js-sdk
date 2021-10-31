@@ -6,20 +6,31 @@ Owlings enables businesses to receive contactless payment both onsite and online
 
 This is a guide on how to implement Owlings Pay on your website using Owlings inline js.
 
-Step 1: Import the Owlings Pay inline SDK into your page
-<script async type="text/javascript" src="cdn/owlings.js"></script>
-Step 2: Setup and Initiate payment on your website
-To initiate payment, pass the setup parameters to Owlings.pay as show in the code snippet below
+# Step 1: Import the Owlings Pay inline SDK into your page
 
+```html
+<script async type="text/javascript" src="cdn/owlings.js"></script>
+```
+
+# Step 2: Setup and Initiate payment on your website
+
+To initiate payment, pass the setup parameters to Owlings.pay as shown in the code snippet below
+
+```
 Owlings.pay({
-key:"Your public key comes here",
-amount:"Amount to pe paid in kobo",
-currency:"NGN",
-onSuccess:function(ref){}// Your on success handler. A reference will be returned when payment is successful,
-onError:function(e){}// your on error handler,
-onClose:function(){}// your on close handler
+key:"Your public key comes here", //string
+amount:"Amount to pe paid in kobo", //number. Cannot be less than 10000
+currency:"NGN", //string
+onSuccess:function(ref){}, //function Your on success handler. A reference will be returned when payment is successful,
+onError:function(e){}, //function your on error handler,
+onClose:function(){}, //functon your on close handler
+env:"sandbox",  //string. One of sandbox or production
+title:"title of this payment", //string
+description: "Description/narrative of this payment", //string
 })
-Step 3: Handle Payment outcome
+```
+
+# Step 3: Handle Payment outcome
 You should handle payment outcome by passing the onSuccess, onClose, and onError methods to the setup
 Step 4: Verify Payment
 You can verify this payment on your server by calling the verify endpoint
